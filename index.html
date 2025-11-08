@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Aarena — пространство ледовых шоу, школы фигурного катания и семейных событий в Москве.">
+    <meta name="keywords" content="Aarena, ледовое шоу, школа фигурного катания, аренда льда">
+    <meta name="author" content="Aarena">
+    <title>Aarena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <header class="site-header site-header--transparent" id="siteHeader">
+        <div class="site-header__inner container">
+            <a href="/" class="site-header__logo logo" aria-label="Aarena">
+                <img class="logo__icon" src="img/logo.jpg" alt="Логотип Aarena">
+            </a>
+            <nav class="site-header__nav" aria-label="Основная навигация">
+                <ul class="site-nav">
+                    <li class="site-nav__item"><a class="site-nav__link" href="#poster">Афиша</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#academy">Академия</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#about">О нас</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#rent">Аренда льда</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#map">Как добраться</a></li>
+                </ul>
+            </nav>
+            <button class="site-header__cta button button--main" type="button">Купить билет</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Промо-блок Aarena">
+            <div class="hero__slider" data-hero-slider>
+                <article class="hero-slide hero-slide--active" data-hero-slide>
+                    <video class="hero-slide__video" autoplay muted loop playsinline poster="img/logo.jpg">
+                        <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    </video>
+                    <span class="hero-slide__overlay" aria-hidden="true"></span>
+                    <div class="hero-slide__content container">
+                        <p class="hero-slide__eyebrow">Aarena</p>
+                        <h1 class="hero-slide__title">Энергия льда</h1>
+                        <p class="hero-slide__description">
+                            Aarena объединяет премиальные ледовые постановки, образовательные программы и семейные события. 
+                            Мы создаём расписание, где премьерные спектакли соседствуют с тренировками академии и открытыми мастер-классами.
+                        </p>
+                        <span class="hero-badge">Сезон 2025-2026</span>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-hero-slide>
+                    <video class="hero-slide__video" autoplay muted loop playsinline poster="img/logo.jpg">
+                        <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+                    </video>
+                    <span class="hero-slide__overlay" aria-hidden="true"></span>
+                    <div class="hero-slide__content container">
+                        <p class="hero-slide__eyebrow">Aarena</p>
+                        <h2 class="hero-slide__title">Ледовый комплекс</h2>
+                        <p class="hero-slide__description">
+                            Гибкие сцены, мультимедийный свет и отдельные зоны для артистов помогают быстро переключаться между концертами,
+                            тренировками и съёмками. Гости выбирают билеты от камерных лож до семейных трибун и попадают на организованные backstage-туры.
+                        </p>
+                        <span class="hero-badge">Билеты уже в продаже</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="hero__progress">
+                <button class="hero-progress hero-progress--active" type="button" data-hero-progress="0">
+                    <span class="hero-progress__label">Премьера</span>
+                    <span class="hero-progress__bar">
+                        <span class="hero-progress__fill"></span>
+                    </span>
+                </button>
+                <button class="hero-progress" type="button" data-hero-progress="1">
+                    <span class="hero-progress__label">Закулисье</span>
+                    <span class="hero-progress__bar">
+                        <span class="hero-progress__fill"></span>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <section class="poster" id="poster" aria-labelledby="posterTitle">
+            <div class="poster__inner container">
+                <div class="poster__header">
+                    <h2 class="poster__title" id="posterTitle">Афиша</h2>
+                    <ul class="poster-tabs" role="tablist">
+                        <li class="poster-tabs__item" role="presentation">
+                            <button class="poster-tabs__button poster-tabs__button--active" type="button" role="tab" aria-selected="true" data-poster-tab="november">
+                                Ноябрь
+                            </button>
+                        </li>
+                        <li class="poster-tabs__item" role="presentation">
+                            <button class="poster-tabs__button" type="button" role="tab" aria-selected="false" data-poster-tab="december">
+                                Декабрь
+                            </button>
+                        </li>
+                        <li class="poster-tabs__item" role="presentation">
+                            <button class="poster-tabs__button" type="button" role="tab" aria-selected="false" data-poster-tab="february">
+                                Февраль
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <article class="poster-card" aria-label="Ледовое шоу «Лебединое озеро»" data-poster-card>
+                    <div class="poster-card__media" data-poster-media>
+                        <span class="poster-tag" data-poster-tag>Премьера</span>
+                    </div>
+                    <div class="poster-card__body">
+                        <p class="poster-card__dates" data-poster-dates>1 – 9 ноября</p>
+                        <h3 class="poster-card__title" data-poster-title>ЦСКА - СКА</h3>
+                        <p class="poster-card__description" data-poster-description>
+                            Центральная игра сезона молодежной хоккейной лиги не оставит никого равнодушным!
+                        </p>
+                        <button class="poster-card__cta button button--accent" type="button">Купить билеты</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="academy" id="academy" aria-labelledby="academyTitle">
+            <div class="academy__inner container">
+                <div class="academy__intro">
+                    <p class="academy__eyebrow">Академия фигурного катания</p>
+                    <h2 class="academy__title" id="academyTitle">Наши надежды</h2>
+                    <blockquote class="academy__quote">
+                        <p>
+                            Фигурное катание — это танец чувства и воли на пути к успеху. Я счастлива, что академия растёт и даёт возможность заниматься этим красивым видом спорта всё большему количеству одарённых детей.
+                        </p>
+                    </blockquote>
+                    <button class="button button--accent academy__cta" type="button">
+                        Записаться на занятие
+                    </button>
+                </div>
+                <div class="academy__carousel" data-carousel>
+                    <div class="academy-carousel__controls">
+                        <button class="academy-carousel__button" type="button" aria-label="Предыдущие истории" data-carousel-prev>
+                            <span aria-hidden="true">←</span>
+                        </button>
+                        <button class="academy-carousel__button" type="button" aria-label="Следующие истории" data-carousel-next>
+                            <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                    <div class="academy-carousel" data-carousel-track>
+                        <article class="academy-card" data-carousel-card>
+                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80" alt="Тренер и юная фигуристка">
+                            <div class="academy-card__body">
+                                <span class="academy-card__tag">Гибкость</span>
+                                <p>Индивидуальный подход и небольшой состав групп делают занятия эффективными.</p>
+                            </div>
+                        </article>
+                        <article class="academy-card" data-carousel-card>
+                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=800&q=80" alt="Преподавательский состав">
+                            <div class="academy-card__body">
+                                <span class="academy-card__tag">Наставники</span>
+                                <p>Команда тренеров во главе с олимпийскими чемпионами и заслуженными мастерами спорта.</p>
+                            </div>
+                        </article>
+                        <article class="academy-card" data-carousel-card>
+                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Тренировка на льду">
+                            <div class="academy-card__body">
+                                <span class="academy-card__tag">Мастер-классы</span>
+                                <p>Регулярные встречи с приглашёнными звёздами мирового фигурного катания.</p>
+                            </div>
+                        </article>
+                        <article class="academy-card" data-carousel-card>
+                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80" alt="Инфраструктура арены">
+                            <div class="academy-card__body">
+                                <span class="academy-card__tag">Инфраструктура</span>
+                                <p>Современные катки, залы ОФП и зоны восстановления в одном кампусе.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hockey" id="hockey" aria-labelledby="hockeyTitle">
+            <div class="hockey__intro container">
+                <p class="hockey__eyebrow">Aarena</p>
+                <h2 class="hockey__title" id="hockeyTitle">Школа хоккейного мастерства</h2>
+                <p class="hockey__subtitle">Именитые наставники</p>
+                <div class="hockey__mentors">
+                    <figure class="hockey-mentor">
+                        <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80" alt="Тренер">
+                        <figcaption>Тренер</figcaption>
+                    </figure>
+                    <figure class="hockey-mentor">
+                        <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=300&q=80" alt="Второй тренер">
+                        <figcaption>Второй тренер</figcaption>
+                    </figure>
+                </div>
+                <p class="hockey__text">
+                    Программа хоккейной студии объединяет олимпийских чемпионов, тренеров и специалистов по физподготовке. 
+                    Мы создаём расписание для игроков 6–16 лет, где ледовые тренировки гармонично дополняются занятиями по технике, 
+                    тактике и игровым ситуациям.
+                </p>
+                <p class="hockey__text">
+                    Обучение проходит малыми группами, поэтому каждый студент получает персональные комментарии наставника, 
+                    анализ видео и программу развития между сменами.
+                </p>
+                <button class="button button--accent hockey__cta" type="button">Записаться в школу</button>
+            </div>
+
+            <div class="hockey-gallery container" data-carousel>
+                <div class="hockey-gallery__controls">
+                    <button class="hockey-gallery__button" type="button" aria-label="Предыдущие фото" data-carousel-prev>←</button>
+                    <button class="hockey-gallery__button" type="button" aria-label="Следующие фото" data-carousel-next>→</button>
+                </div>
+                <div class="hockey-gallery__track" data-carousel-track>
+                    <figure class="hockey-card" data-carousel-card>
+                        <img src="" alt="Юные хоккеисты">
+                    </figure>
+                    <figure class="hockey-card" data-carousel-card>
+                        <img src="" alt="Тренер показывает упражнение">
+                    </figure>
+                    <figure class="hockey-card" data-carousel-card>
+                        <img src="" alt="Командная игра на льду">
+                    </figure>
+                    <figure class="hockey-card" data-carousel-card>
+                        <img src="" alt="Вратарь на тренировке">
+                    </figure>
+                    <figure class="hockey-card" data-carousel-card>
+                        <img src="" alt="Ледовый стадион">
+                    </figure>
+                    <figure class="hockey-card" data-carousel-card>
+                        <img src="" alt="Команда празднует победу">
+                    </figure>
+                    <figure class="hockey-card" data-carousel-card>
+                        <img src="" alt="Сетка ворот">
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <div class="site-footer__inner container">
+            <div class="site-footer__links">
+                <h2 class="visually-hidden">Правовая информация</h2>
+                <ul class="site-footer__list">
+                    <li><a href="#">Правила поведения</a></li>
+                    <li><a href="#">Правила посещения</a></li>
+                    <li><a href="#">Парковка — публичная оферта</a></li>
+                    <li><a href="#">Политика обработки персональных данных</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__info">
+                <div class="site-footer__brand">
+                    <img src="img/logo.jpg" alt="Aarena" class="site-footer__logo">
+                </div>
+                <div class="site-footer__columns">
+                    <div class="site-footer__column">
+                        <div class="site-footer__contact">
+                            <span class="site-footer__label">Контакты</span>
+                            <a class="site-footer__phone" href="tel:+74954150000">+7 999 999 99 99</a>
+                        </div>
+                        <div class="site-footer__contact">
+                            <span class="site-footer__label">Адрес</span>
+                            <p>Москва<br><span class="site-footer__metro">ЦСКА Арена</span></p>
+                        </div>
+                        <div class="site-footer__contact">
+                            <p>Заказать билеты можно на сайте или по телефону:</p>
+                            <a href="tel:+74956659999">+7 999 999 99 99</a>
+                        </div>
+                    </div>
+                    <div class="site-footer__column site-footer__column--grid">
+                        <div class="site-footer__contact">
+                            <span class="site-footer__label">Общие вопросы</span>
+                            <a class="site-footer__link" href="mailto:admin@aarena.ru">admin@aarena.ru</a>
+                        </div>
+                        <div class="site-footer__contact">
+                            <span class="site-footer__label">Контакты для СМИ</span>
+                            <a class="site-footer__link" href="mailto:pr@aarena.ru">pr@aarena.ru</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-footer__social">
+                    <a href="#" aria-label="Telegram" class="footer-social">TG</a>
+                    <a href="#" aria-label="VK" class="footer-social">VK</a>
+                    <a href="#" aria-label="YouTube" class="footer-social">YT</a>
+                    <a href="#" aria-label="Instagram" class="footer-social">IG</a>
+                    <a class="footer-admin" href="admin.html">
+                        <span class="footer-admin__glow" aria-hidden="true"></span>
+                        <span class="footer-admin__label">Войти как администратор</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
+        <!-- rest omitted due to time -->
+    </main>
+</body>
+</html>

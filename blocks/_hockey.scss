@@ -1,0 +1,142 @@
+.hockey{
+    padding: clamp(3rem, 7vw, 6.5rem) 0;
+    background: linear-gradient(180deg, rgba($white, 0.015) 0%, transparent 60%);
+
+    &__intro{
+        text-align: center;
+        max-width: 900px;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__eyebrow{
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        color: rgba($white, 0.5);
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    &__title{
+        margin: 0;
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        line-height: 1.1;
+    }
+
+    &__subtitle{
+        margin: 0;
+        font-size: 1.25rem;
+        color: rgba($white, 0.75);
+    }
+
+    &__mentors{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        justify-content: center;
+        gap: 2rem;
+        margin: 1rem auto 0;
+        max-width: 520px;
+    }
+
+    &__text{
+        margin: 0;
+        color: rgba($white, 0.85);
+        line-height: 1.7;
+    }
+
+    &__cta{
+        align-self: center;
+        margin-top: 0.5rem;
+    }
+}
+
+.hockey-mentor{
+    text-align: center;
+    margin: 0;
+    color: rgba($white, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    img{
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba($white, 0.25);
+        box-shadow: 0 10px 30px rgba($black, 0.35);
+    }
+
+    figcaption{
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}
+
+.hockey-gallery{
+    margin-top: clamp(2rem, 5vw, 3rem);
+    margin-inline-start: 3rem;
+    position: relative;
+    width: 100%;
+}
+
+.hockey-gallery__controls{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.25rem 0 0;
+}
+
+.hockey-gallery__button{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid rgba($white, 0.25);
+    background: rgba($white, 0.08);
+    color: $white;
+    font-size: 1.35rem;
+    cursor: pointer;
+    transition: background $transition-base, transform $transition-base, border-color $transition-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba($black, 0.35);
+
+    &:hover{
+        background: rgba($white, 0.16);
+        border-color: rgba($white, 0.45);
+        transform: translateY(-2px);
+    }
+}
+
+.hockey-gallery__track{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 0 1.5rem;
+    scroll-padding-left: 0;
+    scroll-padding-right: 0;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.hockey-card{
+    flex: 0 0 calc((100% - 2rem) / 3);
+    border-radius: 28px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    box-shadow: 0 20px 45px rgba($black, 0.35);
+
+    img{
+        width: 100%;
+        height: 385px;
+        object-fit: cover;
+        display: block;
+    }
+}

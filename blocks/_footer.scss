@@ -1,0 +1,197 @@
+.site-footer{
+    padding: clamp(3rem, 6vw, 5.5rem) 0;
+    background: rgba($black, 0.15);
+    border-top: 1px solid rgba($white, 0.08);
+
+    &__inner{
+        display: grid;
+        grid-template-columns: minmax(280px, 440px) minmax(380px, 1fr);
+        gap: clamp(2rem, 6vw, 5rem);
+        align-items: start;
+    }
+
+    &__links{
+        justify-self: center;
+    }
+
+    &__list{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+        text-align: left;
+
+        a{
+            color: rgba($white, 0.85);
+            font-size: 0.95rem;
+            line-height: 1.4;
+            transition: color $transition-base;
+
+            &:hover{
+                color: $sky-blue;
+            }
+        }
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+        align-items: stretch;
+    }
+
+    &__brand{
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        justify-content: flex-start;
+        font-size: 1.1rem;
+        letter-spacing: 0.6em;
+        text-transform: uppercase;
+        color: rgba($white, 0.8);
+    }
+
+    &__logo{
+        width: 200px;
+        height: 120px;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    &__brand-name{
+        font-size: 0.9rem;
+        color: rgba($white, 0.7);
+    }
+
+    &__columns{
+        display: grid;
+        grid-template-columns: minmax(220px, 0.8fr) minmax(220px, 1fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
+        align-items: start;
+    }
+
+    &__column{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__column--grid{
+        gap: 1.25rem;
+    }
+
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+
+        a{
+            color: $white;
+            font-weight: 500;
+        }
+
+        p{
+            margin: 0;
+            color: rgba($white, 0.85);
+            line-height: 1.5;
+        }
+    }
+
+    &__label{
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba($white, 0.55);
+    }
+
+    &__phone{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__metro{
+        display: inline-block;
+        margin-top: 0.25rem;
+        color: rgba($white, 0.7);
+    }
+
+    &__link{
+        color: $sky-blue;
+
+        &:hover{
+            color: $white;
+        }
+    }
+
+    &__social{
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+}
+
+.footer-social{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba($white, 0.25);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background $transition-base, color $transition-base;
+
+    &:hover{
+        background: $white;
+        color: $black;
+    }
+
+    &:hover{
+        background: $white;
+        color: $black;
+    }
+}
+
+.footer-admin{
+    position: relative;
+    padding: 0.65rem 1.5rem;
+    border: 1px solid rgba($white, 0.45);
+    border-radius: 999px;
+    background: transparent;
+    color: $white;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform $transition-base, border-color $transition-base, color $transition-base;
+
+    &__label{
+        position: relative;
+        z-index: 2;
+    }
+
+    &__glow{
+        position: absolute;
+        inset: -40%;
+        background: radial-gradient(circle, rgba($sky-blue, 0.65), transparent 60%);
+        opacity: 0;
+        transform: scale(0.75);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &:hover{
+        transform: translateY(-2px);
+        border-color: $sky-blue;
+        color: $sky-blue;
+
+        .footer-admin__glow{
+            opacity: 0.85;
+            transform: scale(1.15);
+        }
+    }
+}

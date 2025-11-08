@@ -1,0 +1,10 @@
+@import url(https://db.onlinewebfonts.com/c/51148dedef2c8ef3ba08d21f3cc7bb06?family=ALS+Gorizont+Variable);
+
+$font-gradient: "ALS Gorizont Variable";
+$font-base: #{$font-gradient}, "Manrope", "Inter", sans-serif;
+$layout-max-width: 1440px;
+$header-rounded: 32px;
+$transition-base: 0.35s ease;
+
+$header-gradient: linear-gradient(180deg, #171717, #151515);
+

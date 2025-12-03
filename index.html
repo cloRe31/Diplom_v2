@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Aarena — пространство ледовых шоу, школы фигурного катания и семейных событий в Москве.">
-    <meta name="keywords" content="Aarena, ледовое шоу, школа фигурного катания, аренда льда">
+    <meta name="description" content="Aarena — концепт ледовой арены, шоу и академии фигурного катания. Учебный дипломный проект.">
     <meta name="author" content="Aarena">
-    <link rel="canonical" href="https://aarena.ru/">
+    <link rel="canonical" href="http://localhost:8000/index.html">
     <link rel="icon" href="img/logo.jpg" type="image/jpeg">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:site_name" content="Aarena">
-    <meta property="og:title" content="Aarena — ледовые шоу, академия и семейные события в Москве">
-    <meta property="og:description" content="Академия фигурного катания и хоккея, аренда льда в Aarena.">
-    <meta property="og:url" content="https://aarena.ru/">
+    <meta property="og:title" content="Aarena — концепт ледовой арены (дипломный проект)">
+    <meta property="og:description" content="Учебный проект: афиша, аренда льда, академия фигурного катания и хоккейная школа.">
+    <meta property="og:url" content="http://localhost:8000/index.html">
     <meta property="og:image" content="img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aarena — ледовая арена для занятий зимними видами спорта">
-    <meta name="twitter:description" content="Академия фигурного катания и хоккея, аренда льда в Aarena.">
+    <meta name="twitter:title" content="Aarena — концепт ледовой арены (диплом)">
+    <meta name="twitter:description" content="Учебный проект: афиша шоу, аренда льда, академия и хоккейная школа.">
     <meta name="twitter:image" content="img/logo.jpg">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Aarena",
-            "url": "https://aarena.ru/",
-            "logo": "https://aarena.ru/img/logo.jpg",
+            "url": "http://localhost:8000/index.html",
+            "logo": "http://localhost:8000/img/logo.jpg",
             "telephone": "+7 999 999 99 99",
             "email": "admin@aarena.ru",
             "address": {
@@ -59,31 +58,33 @@
                     <li class="site-nav__item"><a class="site-nav__link" href="#map">Как добраться</a></li>
                 </ul>
             </nav>
-            <button class="site-header__cta button button--main" type="button">Купить билет</button>
+            <a class="site-header__cta button button--main" href="#poster">Купить билет</a>
         </div>
     </header>
 
     <main>
+        <h1 class="visually-hidden">Aarena</h1>
         <section class="hero" aria-label="Промо-блок Aarena">
             <div class="hero__slider" data-hero-slider>
                 <article class="hero-slide hero-slide--active" data-hero-slide>
-                    <video class="hero-slide__video" autoplay muted loop playsinline poster="img/logo.jpg">
+                    <video class="hero-slide__video" muted loop playsinline preload="metadata" poster="img/logo.jpg">
                         <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
                     </video>
                     <span class="hero-slide__overlay" aria-hidden="true"></span>
                     <div class="hero-slide__content container">
                         <p class="hero-slide__eyebrow">Aarena</p>
-                        <h1 class="hero-slide__title">Энергия льда</h1>
+                        <h2 class="hero-slide__title">Энергия льда</h2>
                         <p class="hero-slide__description">
                             Aarena объединяет премиальные ледовые постановки, образовательные программы и семейные события. 
                             Мы создаём расписание, где премьерные спектакли соседствуют с тренировками академии и открытыми мастер-классами.
                         </p>
                         <span class="hero-badge">Сезон 2025-2026</span>
+                        <span class="hero-badge">Учебный проект — данные условны</span>
                     </div>
                 </article>
 
                 <article class="hero-slide" data-hero-slide>
-                    <video class="hero-slide__video" autoplay muted loop playsinline poster="img/logo.jpg">
+                    <video class="hero-slide__video" muted loop playsinline preload="metadata" poster="img/logo.jpg">
                         <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
                     </video>
                     <span class="hero-slide__overlay" aria-hidden="true"></span>
@@ -148,7 +149,7 @@
                         <p class="poster-card__description" data-poster-description>
                             Центральная игра сезона молодежной хоккейной лиги не оставит никого равнодушным!
                         </p>
-                        <button class="poster-card__cta button button--accent" type="button">Купить билеты</button>
+                        <a class="poster-card__cta button button--accent" href="mailto:admin@aarena.ru?subject=Билеты ЦСКА - СКА (демо)">Купить билеты</a>
                     </div>
                 </article>
             </div>
@@ -179,28 +180,28 @@
                     </div>
                     <div class="academy-carousel" data-carousel-track>
                         <article class="academy-card" data-carousel-card>
-                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80" alt="Тренер и юная фигуристка">
+                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80" alt="Тренер и юная фигуристка" loading="lazy" decoding="async">
                             <div class="academy-card__body">
                                 <span class="academy-card__tag">Гибкость</span>
                                 <p>Индивидуальный подход и небольшой состав групп делают занятия эффективными.</p>
                             </div>
                         </article>
                         <article class="academy-card" data-carousel-card>
-                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=800&q=80" alt="Преподавательский состав">
+                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=800&q=80" alt="Преподавательский состав" loading="lazy" decoding="async">
                             <div class="academy-card__body">
                                 <span class="academy-card__tag">Наставники</span>
                                 <p>Команда тренеров во главе с олимпийскими чемпионами и заслуженными мастерами спорта.</p>
                             </div>
                         </article>
                         <article class="academy-card" data-carousel-card>
-                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Тренировка на льду">
+                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Тренировка на льду" loading="lazy" decoding="async">
                             <div class="academy-card__body">
                                 <span class="academy-card__tag">Мастер-классы</span>
                                 <p>Регулярные встречи с приглашёнными звёздами мирового фигурного катания.</p>
                             </div>
                         </article>
                         <article class="academy-card" data-carousel-card>
-                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80" alt="Инфраструктура арены">
+                            <img class="academy-card__image" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80" alt="Инфраструктура арены" loading="lazy" decoding="async">
                             <div class="academy-card__body">
                                 <span class="academy-card__tag">Инфраструктура</span>
                                 <p>Современные катки, залы ОФП и зоны восстановления в одном кампусе.</p>
@@ -218,11 +219,11 @@
                 <p class="hockey__subtitle">Именитые наставники</p>
                 <div class="hockey__mentors">
                     <figure class="hockey-mentor">
-                        <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80" alt="Тренер">
+                        <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80" alt="Тренер" loading="lazy" decoding="async">
                         <figcaption>Тренер</figcaption>
                     </figure>
                     <figure class="hockey-mentor">
-                        <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=300&q=80" alt="Второй тренер">
+                        <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=300&q=80" alt="Второй тренер" loading="lazy" decoding="async">
                         <figcaption>Второй тренер</figcaption>
                     </figure>
                 </div>
@@ -245,26 +246,78 @@
                 </div>
                 <div class="hockey-gallery__track" data-carousel-track>
                     <figure class="hockey-card" data-carousel-card>
-                        <img src="" alt="Юные хоккеисты">
+                        <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&w=800&q=80" alt="Юные хоккеисты на льду" loading="lazy" decoding="async">
                     </figure>
                     <figure class="hockey-card" data-carousel-card>
-                        <img src="" alt="Тренер показывает упражнение">
+                        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Тренер показывает упражнение" loading="lazy" decoding="async">
                     </figure>
                     <figure class="hockey-card" data-carousel-card>
-                        <img src="" alt="Командная игра на льду">
+                        <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=800&q=80" alt="Командная игра на льду" loading="lazy" decoding="async">
                     </figure>
                     <figure class="hockey-card" data-carousel-card>
-                        <img src="" alt="Вратарь на тренировке">
+                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=800&q=80" alt="Вратарь на тренировке" loading="lazy" decoding="async">
                     </figure>
                     <figure class="hockey-card" data-carousel-card>
-                        <img src="" alt="Ледовый стадион">
+                        <img src="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1b?auto=format&fit=crop&w=800&q=80" alt="Ледовый стадион" loading="lazy" decoding="async">
                     </figure>
                     <figure class="hockey-card" data-carousel-card>
-                        <img src="" alt="Команда празднует победу">
+                        <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80" alt="Команда празднует победу" loading="lazy" decoding="async">
                     </figure>
                     <figure class="hockey-card" data-carousel-card>
-                        <img src="" alt="Сетка ворот">
+                        <img src="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1b?auto=format&fit=crop&w=800&q=80" alt="Сетка ворот" loading="lazy" decoding="async">
                     </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="aboutTitle">
+            <div class="container">
+                <p class="about__eyebrow">О проекте</p>
+                <h2 class="about__title" id="aboutTitle">Учебный макет ледовой арены</h2>
+                <p class="about__description">
+                    Проект создан как дипломная работа: контент, расписание и контакты условные. Задача — показать структуру будущего сайта арены, где совмещены афиша шоу, академия фигурного катания и хоккейная школа.
+                </p>
+                <ul class="about__list">
+                    <li>3 ледовые площадки + зоны восстановления и кафе</li>
+                    <li>Программы для детей 6–16 лет и взрослых любителей</li>
+                    <li>Закрытые показы, открытые тренировки, туры по закулисью</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="rent" id="rent" aria-labelledby="rentTitle">
+            <div class="container">
+                <p class="rent__eyebrow">Аренда льда</p>
+                <h2 class="rent__title" id="rentTitle">Слоты для шоу, команд и частных событий</h2>
+                <div class="rent__grid">
+                    <article class="rent-card">
+                        <h3>Тренировки команд</h3>
+                        <p>Утренние и дневные окна под хоккейные клубы и школы. Лед + раздевалки + помещение для видеоразбора.</p>
+                        <p class="rent-card__note">1,5 часа / 45 000 ₽ — демо-стоимость</p>
+                    </article>
+                    <article class="rent-card">
+                        <h3>Съёмки и шоу</h3>
+                        <p>Гибкая сцена, свет и звук включены. Команда площадки помогает с логистикой и зрительным залом.</p>
+                        <p class="rent-card__note">Ночной слот / 120 000 ₽ — демо-стоимость</p>
+                    </article>
+                    <article class="rent-card">
+                        <h3>Семейные праздники</h3>
+                        <p>Малые катки для дней рождения и мастер-классов. Анимация и фото — по запросу.</p>
+                        <p class="rent-card__note">От 20 000 ₽ — демо-стоимость</p>
+                    </article>
+                </div>
+                <a class="button button--main rent__cta" href="mailto:admin@aarena.ru?subject=Аренда льда (демо)">Запросить слот</a>
+            </div>
+        </section>
+
+        <section class="map" id="map" aria-labelledby="mapTitle">
+            <div class="container">
+                <p class="map__eyebrow">Как добраться</p>
+                <h2 class="map__title" id="mapTitle">ЦСКА Арена, Москва</h2>
+                <p>Ближайшее метро — «ЦСКА». Парковка — по предварительному запросу. Ниже ссылка на схему проезда.</p>
+                <div class="map__links">
+                    <a class="button button--accent" href="https://yandex.ru/maps/-/CDQ2xGa9" target="_blank" rel="noopener noreferrer">Открыть в Яндекс.Картах</a>
+                    <a class="button button--main" href="tel:+79999999999">Позвонить в инфоцентр</a>
                 </div>
             </div>
         </section>
@@ -312,10 +365,10 @@
                     </div>
                 </div>
                 <div class="site-footer__social">
-                    <a href="#" aria-label="Telegram" class="footer-social">TG</a>
-                    <a href="#" aria-label="VK" class="footer-social">VK</a>
-                    <a href="#" aria-label="YouTube" class="footer-social">YT</a>
-                    <a href="#" aria-label="Instagram" class="footer-social">IG</a>
+                    <a href="https://t.me/aarena_demo" aria-label="Telegram" class="footer-social" target="_blank" rel="noopener noreferrer">TG</a>
+                    <a href="https://vk.com/aarena_demo" aria-label="VK" class="footer-social" target="_blank" rel="noopener noreferrer">VK</a>
+                    <a href="https://youtube.com/@aarena_demo" aria-label="YouTube" class="footer-social" target="_blank" rel="noopener noreferrer">YT</a>
+                    <a href="https://instagram.com/aarena_demo" aria-label="Instagram" class="footer-social" target="_blank" rel="noopener noreferrer">IG</a>
                     <a class="footer-admin" href="admin.html">
                         <span class="footer-admin__glow" aria-hidden="true"></span>
                         <span class="footer-admin__label">Войти как администратор</span>

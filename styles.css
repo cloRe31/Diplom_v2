@@ -1,4 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/51148dedef2c8ef3ba08d21f3cc7bb06?family=ALS+Gorizont+Variable);
+@import url(https://db.onlinewebfonts.com/c/51148dedef2c8ef3ba08d21f3cc7bb06?family=ALS+Gorizont+Variable);
 *,
 *::before,
 *::after {
@@ -1288,5 +1289,105 @@ button {
   width: 100%;
   margin-top: 0.5rem;
   font-weight: bold;
+}
+
+.about,
+.rent,
+.map {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+  background: #141418;
+  color: #FFFFFF;
+}
+
+.about__eyebrow,
+.rent__eyebrow,
+.map__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: #9CA7C8;
+  margin-bottom: 0.75rem;
+}
+
+.about__title,
+.rent__title,
+.map__title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.about__description,
+.map p {
+  max-width: 760px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.about__list {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0;
+  padding-left: 1.25rem;
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.rent {
+  background: radial-gradient(circle at 20% 20%, rgba(77, 151, 255, 0.25), transparent 30%), #0C0C10;
+}
+
+.rent__grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin: 1.75rem 0;
+}
+
+.rent-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.rent-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.rent-card p {
+  margin: 0 0 0.25rem;
+  line-height: 1.5;
+}
+
+.rent-card__note {
+  color: #9CA7C8;
+  font-size: 0.95rem;
+}
+
+.rent__cta {
+  margin-top: 0.5rem;
+}
+
+.map__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .about,
+  .rent,
+  .map {
+    padding: 2rem 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

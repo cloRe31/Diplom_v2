@@ -107,6 +107,86 @@
     handleScroll();
     showSlide(0);
 
+    const posterTabs = Array.from(document.querySelectorAll('[data-poster-tab]'));
+    const posterCard = document.querySelector('[data-poster-card]');
+    const posterMedia = posterCard?.querySelector('[data-poster-media]');
+    const posterTag = posterCard?.querySelector('[data-poster-tag]');
+    const posterDates = posterCard?.querySelector('[data-poster-dates]');
+    const posterTitle = posterCard?.querySelector('[data-poster-title]');
+    const posterDescription = posterCard?.querySelector('[data-poster-description]');
+    const posterCta = posterCard?.querySelector('.poster-card__cta');
+
+    const posterContent = {
+        november: {
+            tag: 'Премьера',
+            dates: '1 – 9 ноября',
+            title: 'ЦСКА — СКА',
+            description: 'Центральная игра сезона молодежной хоккейной лиги не оставит никого равнодушным!',
+            image: 'https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=80',
+            ctaLabel: 'Купить билеты',
+            ctaHref: 'mailto:admin@aarena.ru?subject=Билеты ЦСКА - СКА (демо)'
+        },
+        december: {
+            tag: 'Семейное шоу',
+            dates: '15 – 24 декабря',
+            title: 'Ледяная сказка',
+            description: 'Новогоднее шоу с интерактивом для детей и закулисными турами после спектакля.',
+            image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80',
+            ctaLabel: 'Забронировать места',
+            ctaHref: 'mailto:admin@aarena.ru?subject=Новогоднее шоу (демо)'
+        },
+        february: {
+            tag: 'Турнир',
+            dates: '10 – 18 февраля',
+            title: 'Кубок Aarena U16',
+            description: 'Международный юношеский турнир, мастер-классы от наставников и открытые тренировки.',
+            image: 'https://images.unsplash.com/photo-1498372479350-9a4010c9e311?auto=format&fit=crop&w=1200&q=80',
+            ctaLabel: 'Подать заявку на участие',
+            ctaHref: 'mailto:admin@aarena.ru?subject=Кубок Aarena U16 (демо)'
+        }
+    };
+
+    function renderPoster(key){
+        const data = posterContent[key];
+        if(!data || !posterCard){
+            return;
+        }
+
+        posterTabs.forEach((tab) => {
+            const isActive = tab.dataset.posterTab === key;
+            tab.classList.toggle('poster-tabs__button--active', isActive);
+            tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        if(posterMedia){
+            posterMedia.style.backgroundImage = data.image ? `url(${data.image})` : '';
+        }
+        if(posterTag){
+            posterTag.textContent = data.tag;
+        }
+        if(posterDates){
+            posterDates.textContent = data.dates;
+        }
+        if(posterTitle){
+            posterTitle.textContent = data.title;
+        }
+        if(posterDescription){
+            posterDescription.textContent = data.description;
+        }
+        if(posterCta){
+            posterCta.textContent = data.ctaLabel;
+            posterCta.setAttribute('href', data.ctaHref);
+        }
+    }
+
+    posterTabs.forEach((tab) => {
+        tab.addEventListener('click', () => renderPoster(tab.dataset.posterTab));
+    });
+
+    if(posterTabs.length){
+        renderPoster(posterTabs.find((tab) => tab.classList.contains('poster-tabs__button--active'))?.dataset.posterTab || posterTabs[0].dataset.posterTab);
+    }
+
     document.querySelectorAll('[data-carousel]').forEach((carousel) => {
         const track = carousel.querySelector('[data-carousel-track]');
         if(!track){

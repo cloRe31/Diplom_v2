@@ -21,36 +21,91 @@
 
     const slides = Array.from(document.querySelectorAll('[data-hero-slide]'));
     const controls = Array.from(document.querySelectorAll('[data-hero-progress]'));
+    const videos = slides.map((slide) => slide.querySelector('video'));
+    const fills = controls.map((control) => control.querySelector('.hero-progress__fill'));
     let activeIndex = 0;
+    let progressFrame;
     let timer;
-    const INTERVAL = 8000;
+    const DEFAULT_INTERVAL = 8000;
 
     function showSlide(newIndex){
+        cancelAnimationFrame(progressFrame);
+        clearTimeout(timer);
+
+        const previousFill = fills[activeIndex];
+        const previousVideo = videos[activeIndex];
+
         slides[activeIndex].classList.remove('hero-slide--active');
         controls[activeIndex].classList.remove('hero-progress--active');
-        activeIndex = newIndex;
-        slides[activeIndex].classList.add('hero-slide--active');
-        controls[activeIndex].classList.add('hero-progress--active');
-    }
 
-    function startAutoPlay(){
-        clearInterval(timer);
-        timer = setInterval(() => {
-            const nextIndex = (activeIndex + 1) % slides.length;
-            showSlide(nextIndex);
-        }, INTERVAL);
+        if(previousFill){
+            previousFill.style.width = '0%';
+        }
+
+        if(previousVideo){
+            previousVideo.currentTime = 0;
+            previousVideo.pause();
+        }
+
+        activeIndex = newIndex;
+
+        const currentSlide = slides[activeIndex];
+        const currentControl = controls[activeIndex];
+        const currentVideo = videos[activeIndex];
+
+        currentSlide.classList.add('hero-slide--active');
+        currentControl.classList.add('hero-progress--active');
+
+        currentVideo?.play?.().catch(() => {});
+
+        const fill = fills[activeIndex];
+        const updateFill = () => {
+            if(!fill || !currentVideo || !currentVideo.duration || Number.isNaN(currentVideo.duration)){
+                progressFrame = requestAnimationFrame(updateFill);
+                return;
+            }
+
+            const progress = (currentVideo.currentTime / currentVideo.duration) * 100;
+            fill.style.width = `${Math.min(Math.max(progress, 0), 100)}%`;
+            progressFrame = requestAnimationFrame(updateFill);
+        };
+
+        progressFrame = requestAnimationFrame(updateFill);
+
+        const scheduleNext = () => {
+            if(videos[activeIndex] !== currentVideo){
+                return;
+            }
+
+            if(!currentVideo || !currentVideo.duration || Number.isNaN(currentVideo.duration)){
+                timer = setTimeout(() => showSlide((activeIndex + 1) % slides.length), DEFAULT_INTERVAL);
+                return;
+            }
+
+            const remainingMs = Math.max((currentVideo.duration - currentVideo.currentTime) * 1000, 300);
+            timer = setTimeout(() => showSlide((activeIndex + 1) % slides.length), remainingMs);
+        };
+
+        if(currentVideo){
+            if(currentVideo.readyState >= 1){
+                scheduleNext();
+            }else{
+                currentVideo.addEventListener('loadedmetadata', scheduleNext, { once: true });
+            }
+        }else{
+            timer = setTimeout(() => showSlide((activeIndex + 1) % slides.length), DEFAULT_INTERVAL);
+        }
     }
 
     controls.forEach((control, index) => {
         control.addEventListener('click', () => {
             showSlide(index);
-            startAutoPlay();
         });
     });
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
-    startAutoPlay();
+    showSlide(0);
 
     document.querySelectorAll('[data-carousel]').forEach((carousel) => {
         const track = carousel.querySelector('[data-carousel-track]');

@@ -111,16 +111,11 @@
         height: 100%;
         width: 0;
         background: $white;
-        transition: width 0s;
+        transition: width 0.15s linear;
     }
 
     &--active{
         color: $white;
-
-        .hero-progress__fill{
-            width: 100%;
-            transition: width 8s linear;
-        }
     }
 }
 

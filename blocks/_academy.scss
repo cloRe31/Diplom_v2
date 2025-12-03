@@ -68,6 +68,8 @@
 
 .academy__carousel{
     position: relative;
+    width: 100%;
+    min-width: 0;
 }
 
 .academy-carousel{
@@ -142,5 +144,32 @@
     p{
         margin: 0;
         color: rgba($white, 0.85);
+    }
+}
+
+@media (max-width: 960px){
+    .academy__inner{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px){
+    .academy__inner{
+        gap: 1.75rem;
+    }
+
+    .academy-carousel{
+        gap: 1rem;
+        padding: 0 0 1rem;
+    }
+
+    .academy-carousel__controls{
+        position: static;
+        justify-content: flex-end;
+        margin-bottom: 0.75rem;
+    }
+
+    .academy-card{
+        flex: 0 0 85%;
     }
 }

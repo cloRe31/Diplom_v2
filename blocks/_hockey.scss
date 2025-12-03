@@ -78,9 +78,11 @@
 
 .hockey-gallery{
     margin-top: clamp(2rem, 5vw, 3rem);
-    margin-inline-start: 3rem;
+    margin-inline-start: 0;
     position: relative;
     width: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .hockey-gallery__controls{
@@ -116,10 +118,13 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    gap: 1.25rem;
     padding: 0 0 1.5rem;
     scroll-padding-left: 0;
     scroll-padding-right: 0;
     scrollbar-width: none;
+    width: 100%;
+    min-width: 0;
 
     &::-webkit-scrollbar{
         display: none;
@@ -127,7 +132,7 @@
 }
 
 .hockey-card{
-    flex: 0 0 calc((100% - 2rem) / 3);
+    flex: 0 0 calc((100% - 2.5rem) / 3);
     border-radius: 28px;
     overflow: hidden;
     scroll-snap-align: start;
@@ -138,5 +143,39 @@
         height: 385px;
         object-fit: cover;
         display: block;
+    }
+}
+
+@media (max-width: 960px){
+    .hockey__mentors{
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .hockey-gallery__track{
+        gap: 1rem;
+    }
+
+    .hockey-card{
+        flex: 0 0 calc((100% - 1rem) / 2);
+    }
+}
+
+@media (max-width: 640px){
+    .hockey-gallery{
+        margin-inline-start: 0;
+    }
+
+    .hockey-gallery__track{
+        gap: 0.75rem;
+        padding: 0 0 1rem;
+    }
+
+    .hockey-card{
+        flex: 0 0 85%;
+    }
+
+    .hockey-card img{
+        height: clamp(260px, 75vw, 340px);
     }
 }

@@ -1,0 +1,7 @@
+# Allow all user agents, but keep the admin login out of the index
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+# Point to the XML sitemap
+Sitemap: http://localhost:8000/sitemap.xml

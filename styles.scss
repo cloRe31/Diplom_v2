@@ -1,7 +1,16 @@
-@import 'globals/colors', 
-        'globals/variables', 
-        'globals/normalize', 
-        'globals/media';
+@import 'scss/globals/colors',
+        'scss/globals/variables',
+        'scss/globals/normalize',
+        'scss/globals/media';
 
-@import 'blocks/header', 'blocks/logo', 'blocks/button-main', 'blocks/hero', 'blocks/poster', 'blocks/academy', 'blocks/hockey', 'blocks/footer', 'blocks/admin-login', 'blocks/info';
+@import 'scss/blocks/header',
+        'scss/blocks/logo',
+        'scss/blocks/button-main',
+        'scss/blocks/hero',
+        'scss/blocks/poster',
+        'scss/blocks/academy',
+        'scss/blocks/hockey',
+        'scss/blocks/footer',
+        'scss/blocks/admin-login',
+        'scss/blocks/info';
 

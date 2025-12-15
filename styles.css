@@ -1369,18 +1369,12 @@ button {
   font-size: 0.95rem;
 }
 
-.rent__cta {
-  margin-top: 0.5rem;
+.map__vidget {
+  width: 100%;
 }
 
-.map__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
+.map__vidget iframe {
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -1390,4 +1384,3 @@ button {
     padding: 2rem 0;
   }
 }
-/*# sourceMappingURL=styles.css.map */
